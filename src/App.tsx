@@ -2,6 +2,7 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import { Input, Flex, Button,Typography } from 'antd';
+import { DisplayComponent, InputComponent } from './components';
 
 
 const {Title} = Typography;
@@ -18,13 +19,10 @@ function App() {
       <Title type="danger">
           Gabriel's <code>Real Time</code> Editor
         </Title>
+        <InputComponent />
+        <DisplayComponent />
       
-      <TextArea rows={12}></TextArea>
-      <Flex vertical={false}>
-        {Array.from({ length: 1 }).map((_, i) => (
-          <div key={i} style={{ ...baseStyle, backgroundColor: i % 2 ? '#1677ff' : '#1677ffbf' }} />
-        ))}
-      </Flex>
+      
     </Flex>
     </div>
   );
